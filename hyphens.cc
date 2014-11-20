@@ -207,19 +207,15 @@ string hyphenate (parsedWord word) {
     DFAState state = STATE_C;
 
     while (word.pattern[i] != SYM_END) {
-	cout << word.pattern[i] << ": " << state;
 	state = transitionTable[state][word.pattern[i]];
-	cout << " -> " << state;
 
 	if (state == STATE_VCV) {
-	    cout << " VCV";
 	    // unless the second vowel is an E and we're at the end of the word...
 	    if (word.lowercase[i] != "e" || word.pattern[i + 1] != SYM_END)
 		// ...insert a hyphen before the consonant
 		word.original[i - 1].insert(0, "-");
 
 	} else if (state == STATE_VCCV) {
-	    cout << " VCCV";
             // insert a hyphen before the second consonant
 	    word.original[i - 1].insert(0, "-");
 	}
