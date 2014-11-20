@@ -219,7 +219,6 @@ string hyphenate (parsedWord word) {
             // insert a hyphen before the second consonant
 	    word.original[i - 1].insert(0, "-");
 	}
-	cout << endl;
 
 	i++;
     }
