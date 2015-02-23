@@ -36,7 +36,7 @@ using std::string;
 // The pattern string consists of the symbols SYM_C for any consonant, SYM_V
 // for any vowel, and SYM_P for any punctuation character.
 //
-// For example, the word "Translation!" decomposes a vector containing the
+// For example, the word "Translation!" decomposes into a vector containing the
 // tokens {"Tr", "a", "n", "sl", "a", "t", "i", "o", "n", "!"} (as well as a
 // vector containing lowercase copies of the tokens) and the pattern
 // CVCCVCVVCP
@@ -94,7 +94,7 @@ inline char getNextChar (char& nextChar, size_t& wordIndex, const string current
     out.lowercase.push_back(token);
 
 /*****************************************************************************/
-// Throws the last token out of the token vectors - used when encounting a
+// Throws the last token out of the token vectors - used when encountering a
 // valid letter combination
 
 #define throwOutLastToken()			\
